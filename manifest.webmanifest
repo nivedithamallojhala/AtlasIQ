@@ -1,0 +1,12 @@
+{
+  "name": "AtlasIQ — Decision Intelligence",
+  "short_name": "AtlasIQ",
+  "description": "A privacy-first student decision operating system with local profiles, Amy AI, and a browser-native data science laboratory.",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#070a13",
+  "theme_color": "#080b16",
+  "icons": [
+    {"src":"assets/favicon.svg","sizes":"any","type":"image/svg+xml","purpose":"any maskable"}
+  ]
+}

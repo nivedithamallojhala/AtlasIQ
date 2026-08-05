@@ -1,0 +1,484 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="AtlasIQ is a privacy-first decision intelligence platform for students and a browser-native multi-domain data science laboratory." />
+  <meta name="theme-color" content="#080b16" />
+  <title>AtlasIQ — Data, Understood.</title>
+  <link rel="manifest" href="manifest.webmanifest" />
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <canvas id="particleCanvas" aria-hidden="true"></canvas>
+  <div class="noise" aria-hidden="true"></div>
+
+  <header class="topbar glass">
+    <a class="brand" href="#home" aria-label="AtlasIQ home">
+      <span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span>
+      <span>ATLAS<span>IQ</span></span>
+    </a>
+    <nav id="mainNav" aria-label="Primary navigation">
+      <a href="#campus">Campus</a>
+      <a href="#studio">Studio</a>
+      <a href="#proofgraph">ProofGraph</a>
+      <a href="#about">Founder</a>
+    </nav>
+    <div class="top-actions">
+      <button id="commandBtn" class="icon-btn" aria-label="Open command palette" title="Command palette (⌘/Ctrl + K)">⌘K</button>
+      <button id="themeBtn" class="icon-btn" aria-label="Toggle color mode" title="Toggle color mode">◐</button>
+      <button id="profileBtn" class="profile-btn" aria-label="Open local profile" title="Local profile"><span id="profileAvatar">?</span><b id="profileButtonName">Profile</b></button>
+      <a class="button small" href="#studio">Launch Lab</a>
+    </div>
+  </header>
+
+  <main>
+    <section id="home" class="hero section">
+      <div class="hero-copy reveal">
+        <div class="eyebrow"><span class="pulse-dot"></span> BROWSER-NATIVE DECISION INTELLIGENCE</div>
+        <h1><span>DATA.</span><br />UNDERSTOOD.</h1>
+        <p class="hero-sub">Turn academic choices and raw datasets into explainable decisions. AtlasIQ combines a personalized university decision operating system with a multi-domain data science laboratory—entirely in your browser.</p>
+        <div class="hero-actions">
+          <a class="button primary" href="#campus">Optimize my semester <span>→</span></a>
+          <a class="button ghost" href="#studio">Analyze a dataset</a>
+        </div>
+        <div class="trust-row">
+          <span>◆ Private local profiles</span>
+          <span>◆ Explainable outputs</span>
+          <span>◆ No server account required</span>
+        </div>
+      </div>
+
+      <div class="hero-visual reveal" aria-label="Animated AtlasIQ decision network">
+        <div class="orbital-card glass tilt-card">
+          <div class="orbital-header">
+            <span>LIVE DECISION GRAPH</span>
+            <span class="live"><i></i> LOCAL ENGINE</span>
+          </div>
+          <svg class="network-svg" viewBox="0 0 600 460" role="img" aria-label="Connected data and decision nodes">
+            <defs>
+              <radialGradient id="nodeGlow"><stop offset="0" stop-color="#f8d56b"/><stop offset="1" stop-color="#b98c18"/></radialGradient>
+              <filter id="glow"><feGaussianBlur stdDeviation="5" result="blur"/><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+            </defs>
+            <g class="edges">
+              <path d="M300 215 L108 105"/><path d="M300 215 L494 92"/><path d="M300 215 L520 295"/><path d="M300 215 L365 392"/><path d="M300 215 L115 342"/>
+              <path d="M108 105 L494 92"/><path d="M494 92 L520 295"/><path d="M520 295 L365 392"/><path d="M365 392 L115 342"/><path d="M115 342 L108 105"/>
+            </g>
+            <g class="node n-center" transform="translate(300 215)"><circle r="46"/><text y="5">ATLAS</text></g>
+            <g class="node" transform="translate(108 105)"><circle r="31"/><text y="5">COURSES</text></g>
+            <g class="node" transform="translate(494 92)"><circle r="31"/><text y="5">SKILLS</text></g>
+            <g class="node" transform="translate(520 295)"><circle r="31"/><text y="5">CAREER</text></g>
+            <g class="node" transform="translate(365 392)"><circle r="31"/><text y="5">DATA</text></g>
+            <g class="node" transform="translate(115 342)"><circle r="31"/><text y="5">CAMPUS</text></g>
+            <circle class="packet p1" r="4"><animateMotion dur="4s" repeatCount="indefinite" path="M300 215 L108 105"/></circle>
+            <circle class="packet p2" r="4"><animateMotion dur="5s" repeatCount="indefinite" path="M300 215 L520 295"/></circle>
+            <circle class="packet p3" r="4"><animateMotion dur="6s" repeatCount="indefinite" path="M365 392 L494 92"/></circle>
+          </svg>
+          <div class="mini-metrics">
+            <div><strong data-counter="5">0</strong><span>domains</span></div>
+            <div><strong data-counter="30">0</strong><span>decision tools</span></div>
+            <div><strong data-counter="100">0</strong><span>% local</span></div>
+          </div>
+        </div>
+      </div>
+
+      <a class="scroll-cue" href="#platform" aria-label="Scroll to platform overview"><span></span>EXPLORE</a>
+    </section>
+
+    <section id="platform" class="section platform-section">
+      <div class="section-heading reveal">
+        <div class="eyebrow">ONE ENGINE. TWO EXPERIENCES.</div>
+        <h2>From college decisions to real-world datasets.</h2>
+        <p>AtlasIQ applies the same core principles everywhere: measure quality, model outcomes, simulate alternatives, explain the result, and connect every recommendation to evidence.</p>
+      </div>
+      <div class="dual-grid">
+        <article class="experience-card glass reveal">
+          <div class="card-index">01</div>
+          <div class="experience-icon">◈</div>
+          <h3>AtlasIQ Campus</h3>
+          <p>A personal university decision operating system: semester planning, workload forecasting, career readiness, campus mobility, evidence-backed skill growth, and private decision memory.</p>
+          <ul class="feature-list"><li>Private multi-profile workspaces</li><li>Ripple Engine + Atlas Pulse</li><li>Opportunity Radar + Decision Memory</li><li>Amy, an on-device AI copilot</li></ul>
+          <a href="#campus">Enter Campus OS →</a>
+        </article>
+        <article class="experience-card glass reveal">
+          <div class="card-index">02</div>
+          <div class="experience-icon">⌁</div>
+          <h3>AtlasIQ Studio</h3>
+          <p>A universal browser-native analytics lab. Upload or reopen a locally saved dataset to clean, profile, model, visualize, simulate, explain, and export the result.</p>
+          <ul class="feature-list"><li>Automated data profiling</li><li>Local AutoML model arena</li><li>Profile-scoped Data Vault</li><li>Amy-assisted explainability</li></ul>
+          <a href="#studio">Open Data Studio →</a>
+        </article>
+      </div>
+    </section>
+
+    <section id="campus" class="section workspace-section">
+      <div class="section-heading reveal">
+        <div class="eyebrow">ATLASIQ CAMPUS</div>
+        <h2 id="campusHeadline">Your university decisions, modeled before you make them.</h2>
+        <p id="campusSubhead">Create a private profile, build a semester, test tradeoffs, identify bottlenecks, and translate your experience into career proof. Purdue students also get a dedicated campus pack.</p>
+      </div>
+
+      <div class="workspace glass reveal">
+        <aside class="workspace-nav" aria-label="Campus tools">
+          <button class="workspace-tab active" data-campus-tab="overview"><span>◫</span> Command Center</button>
+          <button class="workspace-tab" data-campus-tab="semester"><span>◇</span> Semester Simulator</button>
+          <button class="workspace-tab" data-campus-tab="ripple"><span>⌁</span> Ripple Engine</button>
+          <button class="workspace-tab" data-campus-tab="career"><span>◎</span> Career Intelligence</button>
+          <button class="workspace-tab" data-campus-tab="opportunity"><span>◌</span> Opportunity Radar</button>
+          <button class="workspace-tab" data-campus-tab="journal"><span>↺</span> Decision Memory</button>
+          <button class="workspace-tab" data-campus-tab="navigator"><span>⌖</span> Campus Navigator</button>
+          <div class="workspace-status"><i></i><div><b id="workspaceProfileLabel">Private workspace</b><span>Profile-scoped local storage</span></div></div>
+        </aside>
+
+        <div class="workspace-main">
+          <section class="campus-panel active" id="campus-overview">
+            <div class="panel-topline"><div><span class="muted" id="welcomeLine">Welcome</span><h3 id="decisionCenterTitle">Your Decision Center</h3></div><div class="panel-actions"><button class="button tiny" id="passportBtn">Export Atlas Passport</button><button class="button tiny" id="resetDemo">Reset workspace</button></div></div>
+            <div class="metric-grid">
+              <article class="metric-card draggable" draggable="true"><span>Semester Balance</span><strong id="metricBalance">86</strong><small>/100</small><div class="spark"><i style="--h:44%"></i><i style="--h:65%"></i><i style="--h:58%"></i><i style="--h:84%"></i><i style="--h:72%"></i><i style="--h:91%"></i></div></article>
+              <article class="metric-card draggable" draggable="true"><span>Career Readiness</span><strong id="metricCareer">72</strong><small>%</small><div class="ring-mini" style="--p:72"><b></b></div></article>
+              <article class="metric-card draggable" draggable="true"><span>Weekly Load</span><strong id="metricHours">41</strong><small>hrs</small><div class="trend up">↗ 4 hrs modeled</div></article>
+              <article class="metric-card draggable" draggable="true"><span>Route Resilience</span><strong id="metricRoute">93</strong><small>%</small><div class="trend">2 tight transitions</div></article>
+            </div>
+            <div class="overview-grid">
+              <article class="panel-card wide">
+                <div class="card-head"><div><span class="kicker">FORECAST</span><h4>Workload Horizon</h4></div><span class="confidence">82% confidence</span></div>
+                <canvas id="workloadChart" width="900" height="310" aria-label="Projected weekly workload chart"></canvas>
+                <div class="insight-strip"><span class="alert-dot"></span><p><b>Week 9 is the pressure point.</b> Two exams and a programming milestone overlap. Starting the project seven days earlier reduces modeled peak load by 13%.</p></div>
+              </article>
+              <article class="panel-card">
+                <div class="card-head"><div><span class="kicker">NEXT BEST ACTION</span><h4>Decision Queue</h4></div></div>
+                <div class="decision-list" id="decisionQueue">
+                  <button data-jump="semester"><i>1</i><span><b>Balance course load</b><small>Compare 3 semester scenarios</small></span><em>+8</em></button>
+                  <button data-jump="career"><i>2</i><span><b>Close deployment gap</b><small>Add Docker evidence project</small></span><em>+6</em></button>
+                  <button data-jump="navigator"><i>3</i><span><b>Fix tight transition</b><small>LWSN → WALC in 12 min</small></span><em>+3</em></button>
+                </div>
+              </article>
+            </div>
+          </section>
+
+          <section class="campus-panel" id="campus-semester">
+            <div class="panel-topline"><div><span class="muted">MODEL A SEMESTER</span><h3>Semester Simulator</h3></div><span class="engine-chip">Explainable scoring v1.0</span></div>
+            <div class="sim-layout">
+              <div class="control-card">
+                <label>Course catalog<select id="courseSelect"></select></label>
+                <button id="addCourseBtn" class="button primary full">Add course</button><button id="customCourseBtn" class="button ghost full">Create custom course</button>
+                <div class="selected-courses" id="selectedCourses"></div>
+                <div class="slider-stack">
+                  <label><span>Paid work / week <b id="workHoursOut">8h</b></span><input id="workHours" type="range" min="0" max="30" value="8" /></label>
+                  <label><span>Clubs / week <b id="clubHoursOut">5h</b></span><input id="clubHours" type="range" min="0" max="20" value="5" /></label>
+                  <label><span>Sleep / night <b id="sleepHoursOut">7.5h</b></span><input id="sleepHours" type="range" min="5" max="10" step="0.5" value="7.5" /></label>
+                  <label><span>Commute / day <b id="commuteOut">28m</b></span><input id="commute" type="range" min="5" max="90" value="28" /></label>
+                </div>
+              </div>
+              <div class="sim-results">
+                <div class="score-hero"><div class="score-ring" id="semesterRing"><div><strong id="semesterScore">86</strong><span>BALANCE</span></div></div><div><h4 id="semesterVerdict">Strong, with one pressure point</h4><p id="semesterSummary">This plan is ambitious but sustainable when project work begins early.</p><div class="score-pills"><span id="creditsPill">13 credits</span><span id="loadPill">41 hrs/week</span><span id="riskPill">Moderate risk</span></div></div></div>
+                <div class="factor-bars" id="factorBars"></div>
+                <div class="explain-box"><div><b>WHY THIS SCORE</b><button id="copySemesterExplain" class="text-btn">Copy explanation</button></div><p id="semesterExplain"></p></div>
+                <div class="scenario-actions"><button class="button ghost scenario-save" data-slot="A">Save as A</button><button class="button ghost scenario-save" data-slot="B">Save as B</button><button class="button ghost scenario-save" data-slot="C">Save as C</button></div>
+                <div class="scenario-compare" id="scenarioCompare"></div>
+              </div>
+            </div>
+          </section>
+
+          <section class="campus-panel" id="campus-ripple">
+            <div class="panel-topline"><div><span class="muted">SIGNATURE FEATURE 01</span><h3>Ripple Engine</h3></div><span class="engine-chip">Counterfactual simulator</span></div>
+            <p class="panel-intro">Change one decision and trace its estimated downstream effects across workload, career readiness, free time, and schedule resilience. Ranges communicate uncertainty instead of pretending predictions are guarantees.</p>
+            <div class="ripple-layout">
+              <div class="control-card">
+                <label>Decision to test<select id="rippleDecision"><option value="course">Add a technical course</option><option value="job">Increase work hours</option><option value="club">Join a technical organization</option><option value="project">Build a deployed project</option><option value="sleep">Increase nightly sleep</option></select></label>
+                <label>Magnitude <span id="rippleValueLabel">1 course</span><input id="rippleMagnitude" type="range" min="1" max="5" value="1" /></label>
+                <label>Priority<select id="ripplePriority"><option value="balance">Balanced growth</option><option value="career">Internship readiness</option><option value="academic">Academic performance</option><option value="time">Protect free time</option></select></label>
+                <button id="runRipple" class="button primary full">Run counterfactual</button>
+                <div class="method-note"><b>Method</b><p>Weighted causal assumptions + bounded uncertainty. This is a decision aid, not a guarantee.</p></div>
+              </div>
+              <div class="ripple-stage">
+                <svg id="rippleGraph" viewBox="0 0 760 430" role="img" aria-label="Ripple effect decision graph"></svg>
+                <div class="ripple-narrative" id="rippleNarrative"></div>
+              </div>
+            </div>
+          </section>
+
+          <section class="campus-panel" id="campus-career">
+            <div class="panel-topline"><div><span class="muted">CAREER DECISION INTELLIGENCE</span><h3>Internship Readiness + ProofGraph</h3></div><button id="copyResumeBullets" class="button tiny">Copy project bullets</button></div>
+            <div class="career-layout">
+              <div class="control-card">
+                <label>Target internship<select id="roleSelect"><option>Data Science Intern</option><option>Data Analyst Intern</option><option>Machine Learning Intern</option><option>Data Engineering Intern</option><option>Healthcare Analytics Intern</option><option>Software Engineering Intern</option></select></label>
+                <label>Your current skills<textarea id="skillsInput" rows="7" placeholder="Python, SQL, statistics, Java, communication…"></textarea></label>
+                <button id="analyzeSkills" class="button primary full">Analyze skill gap</button>
+                <p class="microcopy">Tip: paste a resume skills section or type comma-separated skills.</p>
+              </div>
+              <div class="career-results">
+                <div class="readiness-head"><div class="score-ring small" id="careerRing"><div><strong id="careerScore">72</strong><span>MATCH</span></div></div><div><h4 id="careerTitle">Strong foundation for Data Science</h4><p id="careerSummary">Your statistics and Python foundation are strong. Deployment and cloud evidence would make your profile substantially more competitive.</p></div></div>
+                <div class="skill-columns"><div><h5>Verified strengths</h5><div id="matchedSkills" class="tag-cloud"></div></div><div><h5>Highest-value gaps</h5><div id="missingSkills" class="tag-cloud gaps"></div></div></div>
+                <div class="roadmap" id="careerRoadmap"></div>
+              </div>
+            </div>
+          </section>
+
+
+          <section class="campus-panel" id="campus-opportunity">
+            <div class="panel-topline"><div><span class="muted">SIGNATURE FEATURE 03</span><h3>Opportunity Radar</h3></div><span class="engine-chip">Evidence-aware matching</span></div>
+            <p class="panel-intro">Paste any internship description. AtlasIQ extracts the technical and professional signals, compares them with your profile and ProofGraph evidence, and builds a targeted action sprint.</p>
+            <div class="opportunity-layout">
+              <div class="control-card">
+                <label>Opportunity name<input id="opportunityName" placeholder="Data Science Intern — Company" /></label>
+                <label>Job description<textarea id="jobDescription" rows="13" placeholder="Paste the full internship description here…"></textarea></label>
+                <div class="inline-actions"><button id="loadOpportunitySample" class="button ghost">Load sample</button><button id="analyzeOpportunity" class="button primary">Analyze opportunity</button></div>
+                <p class="microcopy">The description remains on this device and can be saved only inside your active local profile.</p>
+              </div>
+              <div class="opportunity-results" id="opportunityResults">
+                <div class="empty-state compact"><span>◌</span><h4>No opportunity analyzed</h4><p>Paste a posting to reveal match strength, proof coverage, missing signals, and the highest-impact next move.</p></div>
+              </div>
+            </div>
+          </section>
+
+          <section class="campus-panel" id="campus-journal">
+            <div class="panel-topline"><div><span class="muted">SIGNATURE FEATURE 04</span><h3>Decision Memory</h3></div><span class="engine-chip">Personal calibration loop</span></div>
+            <p class="panel-intro">Save important choices, record what AtlasIQ predicted, and return later with the real outcome. Over time, the workspace reveals where your assumptions are accurate and where your personal decision model needs adjustment.</p>
+            <div class="journal-layout">
+              <div class="control-card">
+                <label>Decision<input id="journalDecision" placeholder="Take a 16-credit technical semester" /></label>
+                <label>Predicted impact<input id="journalPrediction" placeholder="Career readiness +8; free time −12" /></label>
+                <label>Confidence <span id="journalConfidenceOut">70%</span><input id="journalConfidence" type="range" min="20" max="95" value="70" /></label>
+                <label>Review date<input id="journalReviewDate" type="date" /></label>
+                <label>Why this decision<textarea id="journalReason" rows="5" placeholder="Evidence, assumptions, and tradeoffs…"></textarea></label>
+                <button id="saveJournalEntry" class="button primary full">Save to Decision Memory</button>
+              </div>
+              <div class="journal-stage">
+                <div class="calibration-grid">
+                  <article><span>Decisions logged</span><strong id="journalCount">0</strong></article>
+                  <article><span>Reviewed outcomes</span><strong id="journalReviewed">0</strong></article>
+                  <article><span>Calibration score</span><strong id="journalCalibration">—</strong></article>
+                </div>
+                <div id="journalTimeline" class="journal-timeline"></div>
+              </div>
+            </div>
+          </section>
+          <section class="campus-panel" id="campus-navigator">
+            <div class="panel-topline"><div><span class="muted">CAMPUS MOBILITY INTELLIGENCE</span><h3>Transition Risk Navigator</h3></div><span class="engine-chip" id="campusPackBadge">Purdue Campus Pack</span></div>
+            <div class="navigator-layout">
+              <div class="control-card">
+                <label>Campus mode<select id="campusMode"><option value="purdue">Purdue Campus Pack</option><option value="custom">My custom campus</option></select></label>
+                <label>Starting building<select id="fromBuilding"></select></label>
+                <label>Destination<select id="toBuilding"></select></label>
+                <label>Minutes between classes<input id="transitionMinutes" type="number" min="5" max="60" value="15" /></label>
+                <label>Conditions<select id="weatherCondition"><option value="clear">Clear</option><option value="rain">Rain</option><option value="snow">Snow / ice</option><option value="crowded">Peak class traffic</option></select></label>
+                <button id="calculateRoute" class="button primary full">Analyze transition</button>
+                <a id="mapsLink" class="button ghost full" target="_blank" rel="noopener">Open walking directions ↗</a>
+                <div class="campus-builder" id="campusBuilder">
+                  <span class="kicker">CUSTOM CAMPUS BUILDER</span>
+                  <label>Place name<input id="customBuildingName" placeholder="Engineering Hall" /></label>
+                  <div class="mini-field-grid"><label>Short code<input id="customBuildingShort" maxlength="8" placeholder="ENGR" /></label><label>Map X<input id="customBuildingX" type="number" min="0" max="100" value="50" /></label><label>Map Y<input id="customBuildingY" type="number" min="0" max="100" value="50" /></label></div>
+                  <button id="addCustomBuilding" class="button ghost full">Add place locally</button>
+                  <div id="customBuildingList" class="compact-list"></div>
+                </div>
+              </div>
+              <div class="map-card">
+                <canvas id="campusMap" width="900" height="500" aria-label="Simplified Purdue campus route map"></canvas>
+                <div class="route-result" id="routeResult"></div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+    </section>
+
+    <section id="studio" class="section studio-section">
+      <div class="section-heading reveal">
+        <div class="eyebrow">ATLASIQ STUDIO</div>
+        <h2>Upload data. Reveal the decision hiding inside it.</h2>
+        <p>One local engine profiles healthcare, finance, sports, climate, education, or any CSV—then builds visualizations, tests models, explains drivers, and simulates changes.</p>
+      </div>
+
+      <div class="domain-row reveal" id="domainRow">
+        <button data-domain="healthcare"><span>✚</span><b>Healthcare</b><small>Risk & anomalies</small></button>
+        <button data-domain="finance"><span>↗</span><b>Finance</b><small>Forecast & volatility</small></button>
+        <button data-domain="sports"><span>◉</span><b>Sports</b><small>Performance & momentum</small></button>
+        <button data-domain="climate"><span>☁</span><b>Climate</b><small>Trends & rainfall</small></button>
+        <button data-domain="education"><span>⌂</span><b>Education</b><small>Outcomes & support</small></button>
+      </div>
+
+      <div class="studio-shell glass reveal">
+        <div class="studio-toolbar">
+          <div class="studio-tabs">
+            <button class="studio-tab active" data-studio-tab="data">Data</button>
+            <button class="studio-tab" data-studio-tab="visuals">Visuals</button>
+            <button class="studio-tab" data-studio-tab="automl">AutoML</button>
+            <button class="studio-tab" data-studio-tab="simulate">Simulate</button>
+            <button class="studio-tab" data-studio-tab="explain">Explain</button>
+          </div>
+          <div class="studio-actions"><button id="saveDataset" class="button tiny">Save dataset</button><button id="vaultBtn" class="button tiny">Data Vault</button><button id="exportReport" class="button tiny">Export report</button></div>
+        </div>
+
+        <div class="studio-content">
+          <section class="studio-panel active" id="studio-data">
+            <div class="upload-zone" id="uploadZone" tabindex="0" role="button" aria-label="Upload a CSV dataset">
+              <input id="csvInput" type="file" accept=".csv,text/csv" hidden />
+              <div class="upload-icon">⇧</div>
+              <h3>Drop a CSV into AtlasIQ</h3>
+              <p>or click to browse · processing stays on your device</p>
+              <div class="upload-actions"><button id="browseBtn" class="button primary">Choose CSV</button><button id="loadDemoBtn" class="button ghost">Load education sample</button></div>
+            </div>
+            <div id="dataWorkspace" class="data-workspace hidden">
+              <div class="dataset-head"><div><span class="kicker">ACTIVE DATASET</span><h3 id="datasetName">Dataset</h3><p id="datasetMeta"></p></div><button id="replaceData" class="text-btn">Replace</button></div>
+              <div class="quality-grid">
+                <article><span>Data Quality</span><strong id="qualityScore">—</strong><small>/100</small></article>
+                <article><span>Missing Values</span><strong id="missingPercent">—</strong><small>%</small></article>
+                <article><span>Outliers</span><strong id="outlierCount">—</strong><small>flags</small></article>
+                <article><span>Strongest Relation</span><strong id="topCorrelation">—</strong><small id="topCorrelationLabel">pair</small></article>
+              </div>
+              <div class="profile-layout">
+                <div class="table-wrap"><table id="dataPreview"><thead></thead><tbody></tbody></table></div>
+                <div class="column-profile"><div class="card-head"><div><span class="kicker">SCHEMA</span><h4>Column Intelligence</h4></div></div><div id="columnList"></div></div>
+              </div>
+              <div class="ai-summary"><div class="ai-avatar">AI</div><div><span>ATLASIQ SYNTHESIS</span><p id="aiSummaryText"></p></div><button id="speakSummary" class="icon-btn" title="Read summary aloud">◖</button></div>
+            </div>
+          </section>
+
+          <section class="studio-panel" id="studio-visuals">
+            <div class="visual-toolbar"><label>X / category<select id="xColumn"></select></label><label>Y / value<select id="yColumn"></select></label><label>Chart<select id="chartType"><option value="scatter">Scatter</option><option value="line">Line</option><option value="bar">Bar</option><option value="hist">Histogram</option></select></label><button id="renderChart" class="button primary">Render</button></div>
+            <div class="visual-grid">
+              <article class="viz-card draggable" draggable="true"><div class="card-head"><div><span class="kicker">INTERACTIVE VIEW</span><h4 id="mainChartTitle">Select columns</h4></div><button id="downloadChart" class="text-btn">Save PNG</button></div><canvas id="mainChart" width="1000" height="500"></canvas><div class="time-slider hidden" id="timeSliderWrap"><span>Time window</span><input id="timeSlider" type="range" min="10" max="100" value="100" /><b id="timeSliderOut">100%</b></div></article>
+              <article class="viz-card"><div class="card-head"><div><span class="kicker">RELATIONSHIPS</span><h4>Correlation Map</h4></div></div><canvas id="corrCanvas" width="620" height="500"></canvas></article>
+            </div>
+          </section>
+
+          <section class="studio-panel" id="studio-automl">
+            <div class="automl-top"><div><span class="kicker">BROWSER-NATIVE MODEL ARENA</span><h3>Automatic model comparison</h3><p>Choose a target. AtlasIQ detects regression or classification, trains lightweight local models, evaluates a holdout set, and explains the winner.</p></div><div class="automl-controls"><label>Target<select id="targetColumn"></select></label><button id="runAutoML" class="button primary">Run AutoML</button></div></div>
+            <div id="modelEmpty" class="empty-state"><span>⌁</span><h4>No experiment yet</h4><p>Load a dataset, choose a target, and run the model arena.</p></div>
+            <div id="modelResults" class="hidden">
+              <div class="winner-banner"><div><span>WINNING MODEL</span><h3 id="winningModel">—</h3><p id="winningExplanation"></p></div><div class="winner-score"><strong id="winningScore">—</strong><span id="winningMetric">score</span></div></div>
+              <div class="model-grid" id="modelGrid"></div>
+              <div class="importance-layout"><article><div class="card-head"><div><span class="kicker">EXPLAINABILITY</span><h4>Feature influence</h4></div></div><div id="featureImportance" class="factor-bars"></div></article><article class="explain-box"><div><b>WHY THIS MODEL</b></div><p id="modelWhy"></p><button id="showModelDetails" class="button ghost full">Show methodology</button></article></div>
+            </div>
+          </section>
+
+          <section class="studio-panel" id="studio-simulate">
+            <div class="simulator-studio">
+              <div class="control-card"><span class="kicker">WHAT-IF ENGINE</span><h3>Change an input. Watch the outcome move.</h3><label>Outcome<select id="simTarget"></select></label><label>Driver<select id="simFeature"></select></label><label>Adjustment <span id="simAdjustmentOut">+20%</span><input id="simAdjustment" type="range" min="-50" max="50" value="20" /></label><button id="runDataSimulation" class="button primary full">Simulate decision</button></div>
+              <div class="simulation-output"><div class="before-after"><div><span>BASELINE</span><strong id="baselineOutcome">—</strong></div><div class="arrow-flow">→</div><div><span>SIMULATED</span><strong id="simulatedOutcome">—</strong></div></div><canvas id="simulationChart" width="900" height="420"></canvas><div id="simulationNarrative" class="insight-strip"></div></div>
+            </div>
+          </section>
+
+          <section class="studio-panel" id="studio-explain">
+            <div class="explain-layout">
+              <div class="chat-card">
+                <div class="chat-head"><div class="ai-avatar">AI</div><div><b>AtlasIQ Analyst</b><span>Local conversational layer</span></div><i></i></div>
+                <div class="chat-messages" id="chatMessages"><div class="message ai">Load a dataset, then ask me about quality, missing values, outliers, correlations, trends, modeling, or preprocessing.</div></div>
+                <div class="suggestion-chips"><button>What stands out?</button><button>Which variables matter most?</button><button>Recommend preprocessing</button><button>Explain the model</button></div>
+                <form id="chatForm"><input id="chatInput" autocomplete="off" placeholder="Ask a question about your data…" /><button class="button primary">Ask</button></form>
+              </div>
+              <div class="explain-side">
+                <article><span class="kicker">MODEL CARD</span><h4>Responsible Intelligence</h4><div class="responsible-list"><div><i>✓</i><span><b>Local processing</b><small>Raw files never leave the browser.</small></span></div><div><i>✓</i><span><b>Uncertainty shown</b><small>Predictions are estimates, not guarantees.</small></span></div><div><i>✓</i><span><b>Human-readable logic</b><small>Every score includes an explanation.</small></span></div><div><i>!</i><span><b>Not clinical advice</b><small>Healthcare samples are educational only.</small></span></div></div></article>
+                <article><span class="kicker">PREPROCESSING PLAN</span><div id="preprocessingPlan"></div></article>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+    </section>
+
+    <section id="proofgraph" class="section proof-section">
+      <div class="section-heading reveal">
+        <div class="eyebrow">SIGNATURE FEATURE 02</div>
+        <h2>ProofGraph turns skills into evidence.</h2>
+        <p>Most résumés list skills. AtlasIQ maps each skill to the project, experience, metric, or artifact that proves it—giving recruiters something inspectable rather than another keyword list.</p>
+      </div>
+      <div class="proof-layout glass reveal">
+        <div class="proof-copy">
+          <span class="kicker" id="proofNetworkLabel">YOUR EVIDENCE NETWORK</span>
+          <h3>From “I know this” to “here is the proof.”</h3>
+          <p id="proofDescription">Select a node to inspect the evidence behind it.</p>
+          <div id="proofEvidence" class="proof-evidence"></div>
+          <div class="proof-actions"><button id="addEvidenceBtn" class="button primary">Add evidence</button><button id="exportProof" class="button ghost">Export ProofGraph</button></div>
+        </div>
+        <div class="proof-canvas-wrap"><canvas id="proofCanvas" width="1000" height="650" aria-label="Interactive skill evidence graph"></canvas></div>
+      </div>
+    </section>
+
+    <section id="about" class="section about-section">
+      <div class="about-grid">
+        <div class="founder-visual reveal">
+          <div class="portrait-card glass">
+            <div class="monogram">NM</div>
+            <div class="portrait-data"><span>FOUNDER / DATA SCIENCE</span><b>Niveditha Mallojhala</b><small>Purdue University · B.S. Data Science · 2029</small></div>
+            <div class="scan-line"></div>
+          </div>
+          <div class="founder-stats"><div><strong>216+</strong><span>service hours</span></div><div><strong>80+</strong><span>survey responses analyzed</span></div><div><strong>40+</strong><span>students taught</span></div></div>
+        </div>
+        <div class="about-copy reveal">
+          <div class="eyebrow">THE FOUNDER</div>
+          <h2>I build data products that make complex choices feel clear.</h2>
+          <p>I'm Niveditha Mallojhala, a Data Science student at Purdue University interested in the full path from raw information to a decision someone can confidently act on. I enjoy combining statistics, programming, data cleaning, visualization, and thoughtful product design—not treating them as separate tasks.</p>
+          <p>My experience spans Python, Java, Pandas, Jupyter, statistics, education, community leadership, and early exposure to how digital products are tested and improved in a real business setting. Teaching students at Kumon and conversational English through community programs also shaped how I design: intelligence is only useful when people can understand it.</p>
+          <p>AtlasIQ is my answer to a problem I experienced personally. Students have abundant information but little support for modeling tradeoffs across courses, workload, career preparation, and campus life. I built the platform to turn those disconnected signals into transparent, testable decisions—and extended the same engine into a universal data laboratory.</p>
+          <div class="about-links"><a class="button primary" href="mailto:niveditha.mallojhala@gmail.com">Contact Niveditha</a><button id="copyAbout" class="button ghost">Copy bio</button></div>
+          <div class="skill-line"><span>Python</span><span>Java</span><span>Pandas</span><span>Statistics</span><span>Data Cleaning</span><span>Jupyter</span><span>Product Design</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section resume-section">
+      <div class="resume-cta glass reveal">
+        <div><span class="eyebrow">BUILT FOR THE INTERVIEW</span><h2>One project. A complete engineering story.</h2><p>AtlasIQ demonstrates data engineering, analytics, machine learning, visualization, explainability, product thinking, privacy, front-end development, and deployment in a single cohesive system.</p></div>
+        <div class="resume-code"><div class="code-head"><span>resume-bullets.txt</span><button id="copyFinalBullets" class="text-btn">Copy</button></div><pre id="resumeBullets">AtlasIQ — Founder & Lead Developer
+• Built a privacy-first decision intelligence platform with isolated local profiles, university planning tools, and a multi-domain browser-native analytics laboratory.
+• Engineered automated CSV profiling, outlier detection, correlation analysis, interactive visualization, lightweight AutoML, explainability, and counterfactual simulation in JavaScript.
+• Created Amy, a context-aware on-device copilot that reasons across user profiles, semester models, career evidence, decision outcomes, and active datasets without transmitting personal data.
+• Designed Atlas Pulse, Opportunity Radar, Decision Memory, ProofGraph, local dataset vaults, and portable Atlas Passport exports to turn analysis into measurable action.</pre></div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <a class="brand" href="#home"><span class="brand-mark"><i></i><i></i><i></i></span><span>ATLAS<span>IQ</span></span></a>
+    <p>Designed and engineered by Niveditha Mallojhala · Purdue Data Science</p>
+    <div><a href="#about">About</a><a href="#studio">Data Studio</a><a href="mailto:niveditha.mallojhala@gmail.com">Email</a></div>
+  </footer>
+
+  <div id="toast" role="status" aria-live="polite"></div>
+  <div id="commandPalette" class="modal" aria-hidden="true">
+    <div class="modal-backdrop"></div>
+    <div class="command-box glass"><div class="command-search"><span>⌘</span><input id="commandInput" placeholder="Jump to a feature…" autocomplete="off" /><kbd>ESC</kbd></div><div id="commandResults"></div></div>
+  </div>
+  <div id="methodModal" class="modal" aria-hidden="true"><div class="modal-backdrop"></div><div class="method-box glass"><button class="modal-close">×</button><span class="eyebrow">MODEL METHODOLOGY</span><h3>What AtlasIQ runs locally</h3><p>For numeric targets, the browser model arena compares a mean baseline, ordinary least-squares linear regression, k-nearest-neighbor regression, and a one-split decision stump. For categorical targets, it compares a majority baseline, k-nearest-neighbor classification, Gaussian Naive Bayes, and a decision stump. Results use a deterministic 80/20 split and should be treated as educational prototypes—not production validation.</p><p>The full-stack roadmap can connect the same interface to Python/FastAPI pipelines for cross-validation, XGBoost, LightGBM, CatBoost, SHAP, model registries, and authenticated datasets.</p></div></div>
+
+
+  <div id="profileModal" class="modal" aria-hidden="true">
+    <div class="modal-backdrop"></div>
+    <div class="profile-box glass">
+      <button class="modal-close" id="profileClose">×</button>
+      <div class="profile-modal-head"><div><span class="eyebrow">PRIVATE LOCAL WORKSPACE</span><h3>Make AtlasIQ yours.</h3><p>Profiles are stored only in this browser. Each profile gets separate plans, evidence, datasets, decisions, and opportunity analyses.</p></div><div class="privacy-seal">LOCAL<br><b>ONLY</b></div></div>
+      <div class="profile-modal-grid">
+        <form id="profileForm" class="profile-form">
+          <input id="profileId" type="hidden" />
+          <label>Name<input id="profileName" required maxlength="60" placeholder="Your name" /></label>
+          <div class="two-fields"><label>University<input id="profileUniversity" maxlength="80" placeholder="Purdue University" /></label><label>Graduation year<input id="profileGradYear" type="number" min="2026" max="2040" placeholder="2029" /></label></div>
+          <label>Major / program<input id="profileMajor" maxlength="100" placeholder="Data Science" /></label>
+          <label>Target role<input id="profileGoal" maxlength="100" placeholder="Data Science Intern" /></label>
+          <label>Skills<textarea id="profileSkills" rows="4" placeholder="Python, SQL, statistics, communication…"></textarea></label>
+          <button class="button primary full" type="submit">Save private profile</button>
+        </form>
+        <div class="profile-side">
+          <div class="profile-list-head"><b>Profiles on this device</b><button id="newProfileBtn" class="text-btn">+ New</button></div>
+          <div id="profileList" class="profile-list"></div>
+          <div class="profile-data-actions"><button id="exportProfileBtn" class="button ghost">Export backup</button><label class="button ghost file-button">Import backup<input id="importProfileInput" type="file" accept="application/json" hidden /></label><button id="deleteProfileBtn" class="button danger">Delete active</button></div>
+          <button id="guestModeBtn" class="text-btn guest-btn">Continue in temporary guest mode</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="evidenceModal" class="modal" aria-hidden="true"><div class="modal-backdrop"></div><div class="method-box glass"><button class="modal-close">×</button><span class="eyebrow">PROOFGRAPH BUILDER</span><h3>Add evidence, not just keywords.</h3><form id="evidenceForm" class="stack-form"><label>Skill or strength<input id="evidenceSkill" required placeholder="Machine Learning" /></label><label>Concrete proof<textarea id="evidenceDetail" required rows="4" placeholder="Built a classification pipeline evaluated on a held-out test set…"></textarea></label><label>Evidence type<select id="evidenceType"><option>Project</option><option>Coursework</option><option>Work experience</option><option>Leadership</option><option>Certification</option><option>Artifact</option></select></label><button class="button primary full">Add to my ProofGraph</button></form></div></div>
+
+  <div id="vaultModal" class="modal" aria-hidden="true"><div class="modal-backdrop"></div><div class="vault-box glass"><button class="modal-close">×</button><span class="eyebrow">LOCAL DATA VAULT</span><h3>Reopen your datasets without uploading again.</h3><p>Saved rows stay inside this browser using IndexedDB and are separated by profile.</p><div id="vaultList" class="vault-list"></div></div></div>
+
+  <div id="customCourseModal" class="modal" aria-hidden="true"><div class="modal-backdrop"></div><div class="method-box glass"><button class="modal-close">×</button><span class="eyebrow">CUSTOM COURSE</span><h3>Add any class from any university.</h3><form id="customCourseForm" class="stack-form"><div class="two-fields"><label>Course code<input id="customCourseCode" required placeholder="CS 101" /></label><label>Credits<input id="customCourseCredits" type="number" min="0" max="8" step="0.5" value="3" /></label></div><label>Course name<input id="customCourseName" required placeholder="Introduction to Computing" /></label><div class="two-fields"><label>Hours per week<input id="customCourseHours" type="number" min="1" max="30" value="8" /></label><label>Difficulty (1–5)<input id="customCourseDifficulty" type="number" min="1" max="5" step="0.1" value="3" /></label></div><label>Career relevance (1–10)<input id="customCourseCareer" type="number" min="1" max="10" value="6" /></label><button class="button primary full">Add course locally</button></form></div></div>
+
+  <div id="passportModal" class="modal" aria-hidden="true"><div class="modal-backdrop"></div><div class="passport-box glass"><button class="modal-close">×</button><span class="eyebrow">ATLAS PASSPORT</span><h3>Your portable decision-intelligence profile.</h3><p>Export a standalone recruiter-friendly HTML snapshot or a complete private JSON backup.</p><div id="passportPreview" class="passport-preview"></div><div class="inline-actions"><button id="downloadPassportHtml" class="button primary">Download portfolio snapshot</button><button id="downloadPassportJson" class="button ghost">Download full data backup</button></div></div></div>
+
+  <script src="app.js" defer></script>
+  <script src="enhancements.js" defer></script>
+</body>
+</html>
