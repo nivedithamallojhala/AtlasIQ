@@ -1,0 +1,10 @@
+{
+  "name": "AtlasIQ — Data, Understood",
+  "short_name": "AtlasIQ",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#070a13",
+  "theme_color": "#070a13",
+  "description": "Privacy-first decision intelligence and browser-native data science."
+}
